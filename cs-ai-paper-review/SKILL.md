@@ -69,3 +69,7 @@ weakening honest limitations. Keep two scores separate:
 - Science-fidelity gate: claims to downgrade, verify, or remove before submit.
 - Acceptance strategy: what to fix now, what to reframe, what to defer.
 - Focused tables from each triggered skill, not from irrelevant skills.
+
+When the user also requests implementation of the review findings across the
+manuscript, hand the verified diagnosis to `paper-surgical-editor` rather than
+silently expanding this diagnostic workflow into a rewrite.

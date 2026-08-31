@@ -43,13 +43,15 @@ Feel free to:
 
 ## Skills
 
-The two orchestrators are for full reviews; the focused skills are for specific
-review lenses.
+The review orchestrators are for full diagnostics, the surgical editor turns a
+diagnosis into an evidence-safe revision, and the focused skills provide
+specific lenses.
 
 | Skill | Use when | What it checks |
 | --- | --- | --- |
 | `cs-ai-paper-review` | You want a broad pre-submission audit for a CS/AI paper. | Orchestrator, routes through venue fit, reviewer triage, novelty, structure, experiments, baselines, leakage, claims vs data, formulas, artifacts, limitations, compliance, and rebuttal if needed. |
 | `ieee-access-review` | IEEE Access, or a similar journal process, is the target. | Orchestrator, applies the core review workflow with IEEE Access-style example calibration; venue-specific details must be verified against current guidance. |
+| `paper-surgical-editor` | You want to revise a complete manuscript after or alongside scientific review without inventing evidence or erasing the authors' voice. | Orchestrator, establishes a baseline, applies the smallest evidence-supported edits, performs an adversarial second pass, and returns an exact change log plus before/after scorecard. |
 | `paper-busy-reviewer` | You want a fast first-impression or area-chair triage pass. | Abstract, introduction, main figures/tables, conclusion, reviewer reports, apparent importance, clarity, and slot-worthiness. |
 | `paper-reviewer-sim` | You want to know what skeptical reviewers will attack. | Weak spots, exaggerated claims, unsupported assertions, venue-fit problems, top concerns/strengths, and publication-risk verdict. |
 | `paper-venue-fit-strategy` | You are choosing a venue or adapting to a target venue. | Audience fit, contribution type, review culture, evidence bar, fallback venues, and framing changes. |
@@ -85,6 +87,14 @@ For a full pre-submission review:
 Use cs-ai-paper-review on this paper for a science-fidelity and acceptance-risk audit.
 Target venue: <venue name>.
 Paper files: <PDF/source/data paths>.
+```
+
+For a review followed by an evidence-safe whole-manuscript revision:
+
+```text
+Use paper-surgical-editor on this complete manuscript. Preserve the science and
+authorial voice, apply only supported changes, then provide the change log and
+before/after scorecard.
 ```
 
 For a focused check:
