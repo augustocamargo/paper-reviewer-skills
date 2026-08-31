@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Surgical Editor"
+  short_description: "Revise manuscripts with minimal, evidence-safe edits"
+  default_prompt: "Use $paper-surgical-editor to revise this manuscript without changing unsupported science, then report the edits and reassess submission risk."
